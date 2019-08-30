@@ -30,7 +30,7 @@ Setting Up CodeReady Workspaces Environment
 Go to the "swagger" page for CRW: http://<CHE_URL>/swagger
 Expand the "Stacks" API definition, and look for the "POST /stacks" API.
 
-Copy/paste the stack definition from https://raw.githubusercontent.com/RedHatWorkshops/quarkus-workshop/master/files/stack.json into the text box
+Copy/paste the stack definition from https://raw.githubusercontent.com/jumperwire/codeready-workspaces/master/quarkus-stack.json into the text box
 
 Click "Try it!"
 
@@ -38,11 +38,10 @@ Now “Quarkus Java, CodeReady, odo” stack should appear as an option when you
 
 Import Quarkus Image:
 
-oc create -n openshift -f https://raw.githubusercontent.com/RedHatWorkshops/quarkus-workshop/master/files/stack.imagestream.yaml
+oc create -n openshift -f https://raw.githubusercontent.com/jumperwire/codeready-workspaces/master/quarkus-stack.imagestream.yaml
 
 oc import-image --all quarkus-stack -n openshift
 
 Create and start a new workspace based on custom stack
 
 Import the "hello world" Quarkus app as a new Java project from https://github.com/RedHatWorkshops/quarkus-workshop-labs
-
