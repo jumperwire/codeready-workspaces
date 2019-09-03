@@ -34,8 +34,8 @@
                 "org.eclipse.che.exec",
                 "org.eclipse.che.terminal",
                 "org.eclipse.che.ws-agent",
-                "org.eclipse.che.ls.java"
-  
+                "org.eclipse.che.ls.java",
+                "com.redhat.bayesian.lsp"
               ],
               "attributes": {
                 "memoryLimitBytes": "5368709120"
@@ -61,6 +61,15 @@
           "attributes": {
             "goal": "Run",
             "previewUrl": "${server.8080/tcp}"
+          }
+        },
+        {
+          "commandLine": "${HOME}/stack-analysis.sh -f ${current.project.path}/pom.xml -p ${current.project.path}",
+          "name": "dependency_analysis",
+          "type": "custom",
+          "attributes": {
+            "goal": "Run",
+            "previewUrl": ""
           }
         },
         {
@@ -124,7 +133,6 @@
       "JDK",
       "Maven",
       "Ansible",
-      "CentOS",
       "Git"
     ],
     "id": "quarkus-java"
